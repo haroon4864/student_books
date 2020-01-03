@@ -6,7 +6,7 @@ import BookItem from '../widgetsUI/book_item';
 class HomeContainer extends Component {
 
     componentDidMount(){
-        this.props.dispatch(getBooks(1,0,'desc'))
+        this.props.dispatch(getBooks(5,0,'desc'))
     }
 
     renderItems = (books) => (
@@ -19,7 +19,7 @@ class HomeContainer extends Component {
 
     loadmore = () => {
         let count = this.props.books.list.length;
-        this.props.dispatch(getBooks(1,count,'desc',this.props.books.list))
+        this.props.dispatch(getBooks(5,count,'desc',this.props.books.list))
     }
 
 
